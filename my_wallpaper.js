@@ -22,7 +22,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //rect(40 ,40, rect_width, rect_height);
   
   angleMode (DEGREES)
-  let Dpetallength = 66
+  let Dpetallength = 130
   let petalLength = sqrt(sq(100-Dpetallength)+sq(100-Dpetallength))
   
   //x-shape
@@ -195,22 +195,27 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   fill(255,255,0)
   ellipse(100,100,10,10)
 
-  //circles
-  if (petalLength < 50) {
-    fill(236, 211, 245)
-    } else {
-    fill(255)
-    }
-  arc (200,200,50,50,180,270)
-  arc (0,200,50,50,270,0)
-  arc (100,0,50,50,0,180)
 
-  if (petalLength < 50) {
-    fill(255)
-    } else {
-    fill(236, 211, 245)
-    }
-  arc (200,0,25,25,0,360)
 
+  let x = 20
+  let y = 0
+  push();
   
+  strokeWeight(0.2)
+  fill (200,170,30)
+  //stroke(0)
+  ellipse (0,0,10,10)
+
+  strokeWeight(0.5);
+  while (y < 360/x) {
+    
+    
+    rotate(x);
+    fill(255);
+    ellipse (0,-15,5,20)
+  
+    y = y + 1
+  }
+  pop();
+
 }
