@@ -6,17 +6,20 @@ let nature;
 let spacing;
 let petallength;
 let rotation;
+let segments
+let petals
 grasslength = 2 //grasslength defines how much longer from smallest length
-nature = 1  // the diagonal orientation which makes it look like a random spread.
-spacing = 70  //spacing between grass
+nature = 0  // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 50  //spacing between grass
 petallength = 10 //length of petals
-// rotation = 180 //bee rotation around flower in degrees
+rotation = 180 //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D
+petals = 20 //angle between petals
+segments = 0 //the counter to stop petal loop after one revolution
 
-angleMode (DEGREES)
  
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(A4);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -30,9 +33,10 @@ function wallpaper_background() {
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 drawingContext.setLineDash([0.5]);
+angleMode(DEGREES)
 
-for(let x = 10-4*nature; x <= 200; x = x +spacing) {  //when moving this code, we will change 550 to respective canvas size and the increment
-  for(let y = 20; y <= 200; y = y + spacing) {
+for(let x = 5-4*nature; x <= 200; x = x +spacing) {  //when moving this code, we will change 550 to respective canvas size and the increment
+  for(let y = 10; y <= 200; y = y + spacing) {
 
     drawingContext.setLineDash([0.7]);
    noFill();
@@ -178,21 +182,21 @@ pop();
 
 
 
-//FLOWER
+//FLOWER  //PARAMETERS FOR segment
 push();
-x =20
-y =0
+PETAL = petals
+SEGMENT = segments
 translate (100,100) //centre properties
 strokeWeight(2)
 
 
 strokeWeight(0.5);  //petal properties and value definition
-while (y < 360/x) {
-  rotate(x);
+while (SEGMENT < 360/PETAL) {
+  rotate(PETAL);
   fill(255);
   strokeWeight(1);
   ellipse (0,-15-(petallength/2),5+(petallength/10),20+petallength)
-  y = y + 1
+  SEGMENT = SEGMENT + 1
 }
 
 fill (255,255,0)
@@ -200,7 +204,6 @@ ellipse (0,0,10,10)
 pop();
 
 //Making the bee
-rotation = 91 //bee rotation around flower in degrees
 
 push();
 translate (100,100) 
@@ -224,11 +227,12 @@ if(rotation > 90) {
   
   push(); //bee trail - this took way too long ahah
   drawingContext.setLineDash([5])
+  stroke
   strokeWeight (2)
   arc(35,0,140,140,270,300)
   pop();
   push();
-  drawingContext.setLineDash([5]);  
+  drawingContext.setLineDash([7]);   //second part of line
   strokeWeight(2)
   translate (140,-60.62*2)
   scale(-1,-1)
