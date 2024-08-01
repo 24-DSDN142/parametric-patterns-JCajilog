@@ -1,26 +1,24 @@
-//your parameter variables go here!
-let x; //degree from each petal segment
-let y; //counter for petal segment. To allow the function to stop after completing a revolution. 
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
 let grasslength;
 let nature;
 let spacing;
 let petallength;
 let rotation;
-let segments
-let petals
-grasslength = 5 //grasslength defines how much longer from smallest length (best between 0-5)
-nature = 0  // the diagonal orientation which makes it sort of look like a random spread for each number.
-spacing = 40  //spacing between grass (best between 30 and up. !!under 30 crashes my page loll.
-petallength = 10 //length of petals (best between -10 and 10)
-rotation = 20 //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
-petals = 20 //angle between petals (best between 15-60)
-segments = 0 //the counter to stop petal loop after one revolution
+let segments;
+let petals;
+grasslength = 3        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 1             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 48           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = 10       //length of petals (best between -10 and 10)
+rotation = 30           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 20            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
 
- 
-function setup_wallpaper(pWallpaper) {  //set res. to NINE for the nine images then A3 for final png im
-  pWallpaper.output_mode(GLIDE_WALLPAPER);
-  pWallpaper.resolution(A4);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(A3);
+  pWallpaper.show_guide(false); 
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -333,7 +331,7 @@ if(rotation > 90) {
   endShape();
 
   strokeWeight(4);
-  beginShape();         //copied but translated to the right
+  beginShape();         //copied stripes but translated to the right
 
   curveVertex(6,-90)
   curveVertex(6,-90)
@@ -345,14 +343,14 @@ if(rotation > 90) {
   endShape();
   pop();
   
-  drawingContext.setLineDash([0]); //another bug being chased lol
+  drawingContext.setLineDash([0]); //another bug that is being chased lol
   push();
-  translate (100,100)  //remove this when done so that I can add the rotation values :)
+  translate (100,100)  
   
   
-rotate (rotation-70)  //IF STATEMENT IS HERE for BUG
+rotate (rotation-70)  //IF STATEMENT IS HERE for BUG. When flipped with bee, the bug fights back by chasing the bee. 
 if(rotation < 270) {
-  scale(1,-1) //if the rotation is more than less than 270, then the y-axis flips so that the bug stays upright
+  scale(1,-1) //if the rotation is more than less than 270, then the y-axis flips 
 } else {
 
   scale(1,1)
@@ -369,10 +367,10 @@ if(rotation > 90) {
 
 
 
-  fill(255,255,255,210)    //I also use translate so that I don't have to rewrite every coordinate. Using push and pop to keep it independant
+  fill(255,255,255,210)     //wing 1
   stroke(230,255,240,255);
   strokeWeight(1)
-  noStroke();
+  strokeCap (SQUARE)
   beginShape();
   curveVertex(-3,-80)
   curveVertex(-3,-80)
@@ -386,7 +384,7 @@ if(rotation > 90) {
   endShape();
 
   push();
-  stroke (144,124,156)  //body
+  stroke (99,108,138)  //body
   fill (144,124,156,255)
   strokeWeight(1);
   rectMode(CENTER);
@@ -404,7 +402,7 @@ if(rotation > 90) {
   
   
   push();
-  scale (-1,1)  //second wing just a copy but flipped. Also, 
+  scale (-1,1)  //second wing just a copy but flipped. 
   translate (-12,0)
   beginShape();
   curveVertex(-3,-80)
