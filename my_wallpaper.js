@@ -30,7 +30,7 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-drawingContext.setLineDash([0.5]); //
+drawingContext.setLineDash([0.5]); 
 angleMode(DEGREES)
 
 for(let x = 5-4*nature; x <= 200; x = x +spacing) {  //variable set, condition for loop, final action 
@@ -114,7 +114,7 @@ for(let x = 5-4*nature; x <= 200; x = x +spacing) {  //variable set, condition f
 
 }
 
-strokeWeight(3);  //stem and leaf WAA NCEA jumpscare
+strokeWeight(3);        //stem and leaf WAA NCEA jumpscare
 stroke (93,117,29,150)
 beginShape();
 curveVertex(100,100)
@@ -127,7 +127,7 @@ curveVertex(110,200)
 curveVertex(110,200)
 endShape();
 
-push();
+push();  //first leaf
 strokeWeight(1);
 fill(93,137,29,255)
 
@@ -152,7 +152,7 @@ curveVertex(150,140)
 endShape();
 pop();
 
-push();
+push();  //second leaf
 scale(-1,1)
 translate (-250,-10)
 strokeWeight(1);
@@ -343,7 +343,7 @@ if(rotation > 90) {
   endShape();
   pop();
   
-  drawingContext.setLineDash([0]); //another bug that is being chased lol
+  drawingContext.setLineDash([0]); //another bug that is being chased lol or chasing!?
   push();
   translate (100,100)  
   
