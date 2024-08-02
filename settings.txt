@@ -9,46 +9,286 @@ Your final settings.txt will look something like this when you are finished:
 
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+let x;                   //x variable set for grass code
+let y;                   //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 0        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 0             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 30           //spacing between grass (best between 30 and up). !!under 30 crashes my page loll.
+petallength = -8       //length of petals (best between -10 and 10)
+rotation = 0           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 20            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
 
-function setup_wallpaper(pWallpaper) {
+function setup_wallpaper(pWallpaper) {  
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.resolution(A4);
+  pWallpaper.show_guide(false); 
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
 
 /////////////////////////////////
 
 Wallpaper 2:
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 1        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 2             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 32           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = -6       //length of petals (best between -10 and 10)
+rotation = 20           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 15            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
 
-function setup_wallpaper(pWallpaper) {
+function setup_wallpaper(pWallpaper) {  
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+
+Wallpaper 3:
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 2        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 3             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 35           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = -4       //length of petals (best between -10 and 10)
+rotation = 45           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 25            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+
+Wallpaper 4:
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 3        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 0             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 37           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = -2       //length of petals (best between -10 and 10)
+rotation = 60           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 30            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
+}
+
+/////////////////////////////////
+
+Wallpaper 5:
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 4        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 1             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 40           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = 0       //length of petals (best between -10 and 10)
+rotation = 80           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 35            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 75;
+}
+
+/////////////////////////////////
+
+Wallpaper 6:
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 5        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 1             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 43           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = 3       //length of petals (best between -10 and 10)
+rotation = 130           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 40            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 7:
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 4        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 1             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 45           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = 5       //length of petals (best between -10 and 10)
+rotation = 150           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 45            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 30;
+}
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 3        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 1             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 48           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = 8       //length of petals (best between -10 and 10)
+rotation = 180           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 55            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 80;
+}
+
+/////////////////////////////////
+
+Wallpaper 9: (FINAL IMAGE CHOSEN FOR A3 RES)
+
+let x;                 //x variable set for grass code
+let y;                 //y variable set for grass code
+let grasslength;
+let nature;
+let spacing;
+let petallength;
+let rotation;
+let segments;
+let petals;
+grasslength = 3        //grasslength defines how much longer from smallest length (best between 0-5)
+nature = 1             // the diagonal orientation which makes it sort of look like a random spread for each number.
+spacing = 48           //spacing between grass. This is also influences the amount of grass patches shown as the grass loop stops with respect to the spacing and canvas size. (best between 30 and up). !!under 30 crashes my page loll.
+petallength = 10       //length of petals (best between -10 and 10)
+rotation = 30           //bee rotation around flower in degrees. Bee always stays above flower, so when exceeding 90 degrees and under 270, y-axis flips so that it stays upright and happy :D. This is also a variable set for the bug too
+petals = 20            //angle between petals (best between 15-60)
+segments = 0           //the counter to stop petal loop after one revolution
+
+function setup_wallpaper(pWallpaper) {  
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_PORTRAIT);
+  pWallpaper.show_guide(false); 
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 100;
 }
